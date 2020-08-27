@@ -1,0 +1,22 @@
+{
+  "name": "get-csgo-inventory",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rimraf dist",
+    "prebuild:lib": "yarn clean",
+    "build:lib": "tsc",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@vercel/node": "^1.8.0",
+    "jest": "^26.4.2",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^26.3.0",
+    "typescript": "^4.0.2"
+  },
+  "dependencies": {
+    "axios": "^0.20.0"
+  }
+}
