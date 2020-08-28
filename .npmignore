@@ -1,6 +1,7 @@
 .editorconfig
 .nvmrc
 .prettierrc
+.gitignore
 docs
 tsconfig.json
 tslint.json
@@ -8,3 +9,6 @@ tslint.json
 src
 tests
 api
+index.html
+jest.config.json
+*.lock
