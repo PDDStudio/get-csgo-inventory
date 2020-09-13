@@ -1,8 +1,20 @@
 {
   "name": "get-csgo-inventory",
-  "version": "1.0.0",
-  "main": "index.js",
+  "description": "Query a user's CSGO inventory in JavaScript",
+  "version": "1.0.1",
+  "main": "dist/index.js",
   "license": "MIT",
+  "author": {
+    "name": "Patrick Jung",
+    "email": "patrick.pddstudio@gmail.com"
+  },
+  "directories": {
+    "lib": "./dist",
+    "test": "./tests"
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "clean": "rimraf dist",
     "prebuild:lib": "yarn clean",
