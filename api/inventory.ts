@@ -41,5 +41,6 @@ export default async (request: NowRequest, response: NowResponse) => {
     }
 
     const inventory = await getCsgoInventory(steamId)
+    response.setHeader('Access-Control-Allow-Origin', '*')
     response.status(200).json(inventory)
 } 
