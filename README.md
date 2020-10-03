@@ -24,7 +24,7 @@ npm i get-csgo-inventory
 The API of this module is simple.  
 There's only one function which you can call:
 
-```js
+```ts
 import { getCsgoInventory } from 'get-csgo-inventory'
 
 
@@ -38,7 +38,7 @@ The `getCsgoInventory()` function returns a `PlayerInventoryResponse` or `undefi
 
 ### PlayerInventoryResponse
 
-```js
+```ts
 interface PlayerInventoryResponse {
     totalItemCount: number
     items: CsgoItem[]
