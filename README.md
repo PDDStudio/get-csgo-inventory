@@ -33,4 +33,4 @@ const inventoryResponse = await getCsgoInventory("SOME_STEAM_ID")
 
 ## License
 
-> TODO Add license information
+This Project is Licensed under the [MIT License](./LICENSE).  
