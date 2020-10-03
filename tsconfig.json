@@ -61,5 +61,9 @@
   },
   "include": [
     "src/**/*"
-  ]
+  ],
+  "typedocOptions": {
+    "mode": "file",
+    "out": "docs"
+  }
 }
