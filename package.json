@@ -19,13 +19,16 @@
     "clean": "rimraf dist",
     "prebuild:lib": "yarn clean",
     "build:lib": "tsc",
-    "test": "jest"
+    "test": "jest",
+    "predocs": "rimraf docs",
+    "docs": "typedoc"
   },
   "devDependencies": {
     "@vercel/node": "^1.8.0",
     "jest": "^26.4.2",
     "rimraf": "^3.0.2",
     "ts-jest": "^26.3.0",
+    "typedoc": "^0.19.2",
     "typescript": "^4.0.2"
   },
   "dependencies": {
