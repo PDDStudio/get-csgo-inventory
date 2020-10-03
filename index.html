@@ -68,8 +68,12 @@
 					<h1>getCsgoInventory()</h1>
 				</a>
 				<blockquote>
-					<p>A simple &amp; small JS module to query a Steam user&#39;s CSGO inventory.</p>
+					<p>A simple JavaScript module to query a Steam user&#39;s CSGO inventory.</p>
 				</blockquote>
+				<a href="#story" id="story" style="color: inherit; text-decoration: none;">
+					<h2>Story</h2>
+				</a>
+				<p>When querying a Steam User&#39;s Inventory via Steam, I found the returned response was kinda messy and you always had to get information from different sources in the response model just to get all the Counter Strike: Global Offensive related information into one place.<br>This module tackles this issue by doing the same requests against the official steam endpoints but also doing the mapping of the responses to a nice use-case adjusted response model that includes all available information about a CS:GO Player&#39;s Steam Inventory. </p>
 				<a href="#installation" id="installation" style="color: inherit; text-decoration: none;">
 					<h2>Installation</h2>
 				</a>
@@ -91,15 +95,43 @@ npm i get-csgo-inventory</code></pre>
 				<a href="#response-model" id="response-model" style="color: inherit; text-decoration: none;">
 					<h2>Response Model</h2>
 				</a>
-				<blockquote>
-					<p>TODO Add docs for response model</p>
-				</blockquote>
+				<p>The <code>getCsgoInventory()</code> function returns a <code>PlayerInventoryResponse</code> or <code>undefined</code> in case of an Error/Invalid Data.</p>
+				<a href="#playerinventoryresponse" id="playerinventoryresponse" style="color: inherit; text-decoration: none;">
+					<h3>PlayerInventoryResponse</h3>
+				</a>
+				<pre><code class="language-js">interface PlayerInventoryResponse {
+    <span class="hljs-attr">totalItemCount</span>: number
+    <span class="hljs-attr">items</span>: CsgoItem[]
+}</code></pre>
+				<p>The <code>items</code> array contains the list of CS:GO Items from the User&#39;s inventory:</p>
+				<a href="#csgoitem" id="csgoitem" style="color: inherit; text-decoration: none;">
+					<h3>CsgoItem</h3>
+				</a>
+				<pre><code class="language-js">interface CsgoItem {
+    <span class="hljs-attr">appId</span>: number
+    <span class="hljs-attr">assetId</span>: string
+    <span class="hljs-attr">classId</span>: string
+    <span class="hljs-attr">instanceId</span>: string
+    <span class="hljs-attr">amount</span>: string
+    <span class="hljs-attr">currency</span>: number
+    <span class="hljs-attr">backgroundColor</span>: string
+    <span class="hljs-attr">iconUrl</span>: string
+    <span class="hljs-attr">descriptions</span>: string[]
+    <span class="hljs-attr">tradable</span>: number
+    <span class="hljs-attr">name</span>: string
+    <span class="hljs-attr">nameColor</span>: string
+    <span class="hljs-attr">type</span>: string
+    <span class="hljs-attr">marketName</span>: string
+    <span class="hljs-attr">marketHashName</span>: string
+    <span class="hljs-attr">commodity</span>: number
+    <span class="hljs-attr">marketTradableRestriction</span>: number
+    <span class="hljs-attr">marketable</span>: number
+}</code></pre>
+				<p>The properties are named the same as the ones returned from the official endpoint, it&#39;s just using camel case instead of snake case.<br>(TODO: Find the link to the official steam docs and link it here)</p>
 				<a href="#license" id="license" style="color: inherit; text-decoration: none;">
 					<h2>License</h2>
 				</a>
-				<blockquote>
-					<p>TODO Add license information</p>
-				</blockquote>
+				<p>This Project is Licensed under the <a href="./LICENSE">MIT License</a>.  </p>
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
